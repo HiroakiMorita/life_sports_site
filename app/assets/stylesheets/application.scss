@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+// setting
+@import "reset";
+
+// signin,sginup
+@import "users/sign_in";
