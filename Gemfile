@@ -62,3 +62,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'devise'
+
+# binding.pry等使用
+gem 'pry-rails'
+gem 'pry-byebug'
+gem 'pry-doc'
