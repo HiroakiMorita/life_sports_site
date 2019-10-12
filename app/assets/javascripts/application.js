@@ -14,3 +14,14 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+$("#login-button").click(function(event){
+  event.preventDefault();
+
+$('form').fadeOut(500);
+$('.wrapper').addClass('form-success');
+});
