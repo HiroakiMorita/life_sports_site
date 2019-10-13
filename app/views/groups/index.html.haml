@@ -1,265 +1,360 @@
-!!!
-%html{:lang => "ja"}
+<!DOCTYPE html>
+%html(lang="ja")
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    / Google Tag Manager
-    :javascript
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-NFQWJVF');
-    / End Google Tag Manager
-    %meta{:charset => "UTF-8"}/
+    %meta(charset="UTF-8")/
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
+    %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
     %title Life SPORTS
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %meta{:content => "スマートフォンアプリの「Life SPORTS」を通じて、より多くの人にスポーツの楽しさを伝え、気軽にスポーツができる世の中を創ることを目指しています。", :name => "description"}/
-    %meta{:content => "ライフスポーツ, life, sports, スポーツ, ライフ", :name => "keywords"}/
-    %meta{:content => "ライフスポーツ", :property => "og:title"}/
-    %meta{:content => "website", :property => "og:type"}/
-    %meta{:content => "https://lifesports.jp", :property => "og:url"}/
-    %meta{:content => "ライフスポーツ", :property => "og:site_name"}/
-    %meta{:content => "「Life SPORTS」は、スマートフォンでスポーツイベントや習い事、施設などが簡単に探せる『スポーツマッチングアプリ』です。", :property => "og:description"}/
-    %meta{:content => "ja_JP", :property => "og:locale"}/
-    %meta{:content => "https://lifesports.jp/image/thumbnail.png", :property => "og:image"}/
-    / common
-    %link{:href => "./image/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
-    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :rel => "stylesheet"}/
-    %link{:href => "./css/common.css", :rel => "stylesheet"}/
-    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
-    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
-    / index
-    %link{:href => "./css/index.css", :rel => "stylesheet"}/
   %body
-    / Google Tag Manager (noscript)
-    %noscript
-      %iframe{:height => "0", :src => "https://www.googletagmanager.com/ns.html?id=GTM-NFQWJVF", :style => "display:none;visibility:hidden", :width => "0"}
-    / End Google Tag Manager (noscript)
-    .body
-      / header
-      %header
-        .header-container
-          .header-logo
-            %a{:href => "index.html"}
-              %img.header-banner{:src => "./image/logo.png"}/
-          .header-list
-            %ul
-              %li
-                %a.header-item{:href => "index.html#mission"} ミッション
-              %li
-                %a.header-item{:href => "index.html#ag"} 行動指針
-              %li
-                %a.header-item{:href => "index.html#service"} サービス
-              %li
-                %a.header-item{:href => "index.html#company"} 会社概要
-              %li
-                %a.header-item{:href => "contact.html"} お問い合わせ
-              %li
-                %a.header-item{:href => "recruit.html", :target => "_blank"}
-                  募集サイト
-                  %span.icon
-                    %img{:src => "./image/icon_link.png"}/
-      / vision
-      .vision
-        .vision-text
-          %h2
-            気軽にスポーツができる
-            %br>/
-            世の中を創る
-        .store-link{:align => "center"}
-          %a{:href => "https://itunes.apple.com/us/app/life-sports-supotsu-zhong/id1146392018?l=ja&ls=1&mt=8"}
-            %img.top-appstore{:src => "./image/appstore_link.png"}/
-          %a{:href => "https://play.google.com/store/apps/details?id=jp.lifesports"}
-            %img.top-playstore{:src => "./image/playstore_link.png"}/
-      / mission
-      #mission.mission
-        .mission-titles.titles
-          %p.mission-title.title ミッション
-          %p.mission-subtitle.subtitle Corporate Mission
-        .mission-content
-          .col-sm-4.content-part
-            %img{:src => "./image/img_mission1_1.png", :width => "95%"}/
-          .col-sm-4.content-part
-            %img{:src => "./image/img_mission2_2.png", :width => "95%"}/
-          .col-sm-4.content-part
-            %img{:src => "./image/img_mission3_3.png", :width => "95%"}/
-          .float
-        .mission-text
-          %p.mission-text
-            現在、多くの人が運動不足・健康に問題意識を持っていますが、実際にスポーツをしている人はまだまだ少ないと感じています。スポーツや運動に対する「やりたいけど、できない」という現状があると感じています。
-            %br/
-            %br/
-            Life SPORTSを通じて、より多くの人にスポーツの楽しさを伝え、気軽にスポーツができる世の中を創ることで変えていきたいと考えています。
-            %br/
-            %br/
-            気軽にスポーツができる世の中になれば、海外から日本に来た外国人と日本人が一緒にスポーツをしたり、逆に日本人が海外に行った際に現地の人と自由にスポーツを通じてコミュニケーションをとったりできるような世界になると信じています。
-      / Action guideline
-      #ag.ag
-        .ag-titles.titles
-          %p.ag-title.title 行動指針
-          %p.ag-subtitle.subtitle Action Guidelines
-        .ag-list.row
-          .col-sm-3.col-xs-6
-            .ag-content.ag-1
-              %p.guide-content-title
-                想いがひとを
-                %br>/
-                情熱がチームを
-              %p.guide-content-text
-                想いで、人を惹きつけよう。チームの情熱でビジョンを目指そう。
-          .col-sm-3.col-xs-6
-            .ag-content.ag-2
-              %p.guide-content-title
-                違いが強み
-                %br>/
-                集まれば革新
-              %p.guide-content-text
-                個性に勝るスキルはない。個性を集めて成し遂げよう。
-          .col-sm-3.col-xs-6
-            .ag-content.ag-3
-              %p.guide-content-title
-                プロダクトで
-                %br>/
-                魅了せよ
-              %p.guide-content-text
-                納得できるプロダクトを世に出そう。1人でも多くのユーザーをファンにしよう。
-          .col-sm-3.col-xs-6
-            .ag-content.ag-4
-              %p.guide-content-title
-                地図にもない道を
-                %br>/
-                探せ
-              %p.guide-content-text
-                固定概念や常識にとらわれず、手法を洗い出そう。そして常に最短距離を歩こう。
-          .col-sm-3.col-xs-6
-            .ag-content.ag-5
-              %p.guide-content-title
-                そこは歓声が
-                %br>/
-                聴こえるか
-              %p.guide-content-text
-                本当にそれが本質か考えよう。本質の積み重ねでユーザーの満足度をあげよう。
-          .col-sm-3.col-xs-6
-            .ag-content.ag-6
-              %p.guide-content-title
-                本当に好きな仕事は
-                %br>/
-                自分にしか創れない
-              %p.guide-content-text
-                価値のある仕事を創ろう。オンリーワンの仕事を目指そう。
-          .col-sm-3.col-xs-6
-            .ag-content.ag-7
-              %p.guide-content-title
-                覚悟無くして
-                %br>/
-                決断なし
-              %p.guide-content-text
-                日々の努力が自信になり、そして覚悟が持てる。その決断の積み重ねが成長につながる。
-      / service
-      #service.service
-        .service-titles.titles.text-center
-          %p.service-title.title サービス
-          %p.service-subtitle.sub-title Service "Life SPORTS"
-        .row
-          .col-sm-5
-            .service-content
-              %h1 スポーツマッチングアプリ
-              .service-image
-                %img.service-image{:src => "./image/logo.png"}/
-              %p.service-text
-                「Life SPORTS」は、スマートフォンでイベントや習い事、施設などが簡単に探せる『スポーツマッチングアプリ』です。
-                %br/
-                %br/
-                自身が行いたいスポーツの参加者を募ったり、他のユーザーが募集しているスポーツイベントに参加したり、初心者から上級者まで、いっしょにスポーツをする仲間や対戦チームを簡単に探すことができます。また位置情報を軸に、全国のスポーツ施設やスポーツスクール・習い事も簡単に探すことができます。
-                %br/
-                %br/
-                スポーツマッチングを通じて新しい交流関係や興味のあるスポーツを発見できる場としてもご利用いただけます。
-          .col-sm-7
-            .phones
-              .phone
-                %img.phone-img{:src => "./image/phones.png"}/
-              .links
-                %a{:href => "https://itunes.apple.com/us/app/life-sports-supotsu-zhong/id1146392018?l=ja&ls=1&mt=8"}
-                  %img.service-appstore{:src => "./image/appstore_link.png"}/
-                %a{:href => "https://play.google.com/store/apps/details?id=jp.lifesports"}
-                  %img.service-playstore{:src => "./image/playstore_link.png"}/
-      / company
-      #company.company
-        .company-titles.titles
-          %p.company-title.title 会社概要
-          %p.company-subtitle.sub-title Company Overview
-        .company-table
-          %table{:align => "center"}
-            %tr
-              %th{:align => "right"} 会社名
-              %td 株式会社ライフスポーツ Lifesport.Inc
-            %tr
-              %th{:align => "left"} 代表取締役
-              %td 中村 俊一
-            %tr
-              %th 本社
-              %td
-                〒153-0044
-                %br/
-                東京都目黒区大橋1-5-1-2123
-            %tr
-              %th 開発拠点
-              %td
-                〒150-0013
-                %br>/
-                東京都渋谷区恵比寿4-3-1 クイズ恵比寿804
-            %tr
-              %th{:align => "right"} 事業内容
-              %td
-                メディア事業
-                %br>/
-                webアプリケーション開発
-                %br>/
-                スポーツ用品の販売及びレンタル
-                %br>/
-                スポーツ施設の利用促進事業
-                %br>/
-                インターネット広告事業
-            %tr
-              %th{:align => "right"} 資本金
-              %td 2,300万円（資本準備金含む）
-            %tr
-              %th{:align => "right"} 設立日
-              %td 2016年2月17日
-            %tr
-              %th{:align => "right"} 取引先
-              %td
-                みずほ銀行 渋谷支店
-                %br>/
-                辻・本郷税理士法人
-        .contact-btn
-          %a.square_btn{:href => "contact.html"}
-            %span お問い合わせはこちら
-      .recruit
-        .rec-blank
-        .recruit-btn
-          %a{:href => "recruit.html"}
-            .square_btn Recruit Imformation
-      / footer
-      %footer
-        .footer-container
-          .footer-right
-            %ul
-              %li
-                %a.footer-item{:href => "index.html#mission"} ミッション
-              %li
-                %a.footer-item{:href => "index.html#ag"} 行動指針
-              %li
-                %a.footer-item{:href => "index.html#service"} サービス
-              %li
-                %a.footer-item{:href => "index.html#company"} 会社概要
-              %li
-                %a.footer-item{:href => "contact.html"} お問い合わせ
-              %li
-                %a.footer-item{:href => "recruit.html", :target => "_blank"}
-                  募集サイト
-                  %span.icon
-                    %img{:src => "./image/icon_link.png"}/
-          .footer-left
-            %p Copyright (C) 2016 Lifesports Inc. All Rights Reserved
-          .footer-clear
+
+    %header.cmn-header__pc-mode
+      .cmn-header__bg--wrap
+        .cmn-header__wrap
+          .nav-pc
+            %ul.nav-pc__on
+              %li.nav-pc__on--child.nav-blank
+                = link_to new_user_registration_path, class: '' do
+                  新規登録
+              %li.nav-pc__on--child.nav-blank
+                = link_to new_user_session_path, class: '' do
+                  ログイン画面
+
+            .header-logo__wrap
+              = link_to'/', target: "_blank" do
+                = image_tag "logo.png", height:"40px"
+            
+            .nav-pc__under
+              %ul.nav-pc__main
+                %li.nav-pc__main--child.category
+                  = link_to'/', class: 'nav-pc__link strong' do
+                    カテゴリ
+
+                .menu-dropdown.oral
+                  .menu-dropdown__wrap
+                    .menu-dropdown__button--wrap
+                      = link_to'/', class: 'menu-dropdown__button' do
+                        = image_tag "/",class: 'rollover-on', alt:'position:absolute; opacity:0; z-index:2;'
+                        = image_tag "/",class: 'rollover', alt:'野球'
+                        %span 野球
+                      = link_to'/', class: 'menu-dropdown__button' do
+                        = image_tag "/",class: 'rollover-on', alt:'position:absolute; opacity:0; z-index:2;'
+                        = image_tag "/",class: 'rollover', alt:'野球'
+                        %span サッカー
+                      = link_to'/', class: 'menu-dropdown__button' do
+                        = image_tag "/",class: 'rollover-on', alt:'position:absolute; opacity:0; z-index:2;'
+                        = image_tag "/",class: 'rollover', alt:'野球'
+                        %span 水泳
+
+                %li.nav-pc__main--child.space
+                  = link_to'/', class: 'nav-pc__link strong' do
+                    場所
+                %li.nav-pc__main--child.space
+                  = link_to'/', class: 'nav-pc__link strong' do
+                    仲間
+                %li.nav-pc__main--child.space
+                  = link_to'/', class: 'nav-pc__link strong' do
+                    aaa
+                %li.nav-pc__main--child.space
+                  = link_to'/', class: 'nav-pc__link strong' do
+                    bbb
+
+    %main.main
+      %section.first-section
+        .main-visual
+          .main-visual__content--wrap
+            .main-bg
+              .main-theme
+              = image_tag "bg_top_pc.jpg"
+
+      %section.second-section
+        .main-visual
+          .main-visual__content--wrap
+            .main-bg
+              .main-theme
+              %h2 野球
+              = image_tag "20190713_02.jpg"
+
+      %section.third-section
+        .main-visual
+          .main-visual__content--wrap
+            .main-bg
+              .main-theme
+              %h2 水泳
+              = image_tag "main_img.jpg",height:"180px"
+
+      %section.fourth-section
+        .main-visual
+          .main-visual__content--wrap
+            .main-bg
+              .main-theme
+              %h2 サッカー
+              = image_tag "20180711170309.jpg",height:"180px"
+              = image_tag "bg_recruit_pc.jpg"
+
+    = render partial:"groups/footer"
+
+-# !!!
+-# %html{:lang => "ja"}
+-#   %head
+-#     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+-#     / Google Tag Manager
+-#     :javascript
+-#       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+-#               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+-#               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+-#               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+-#               })(window,document,'script','dataLayer','GTM-NFQWJVF');
+-#     / End Google Tag Manager
+-#     %meta{:charset => "UTF-8"}/
+-#     %title Life SPORTS
+-#     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+-#     %meta{:content => "スマートフォンアプリの「Life SPORTS」を通じて、より多くの人にスポーツの楽しさを伝え、気軽にスポーツができる世の中を創ることを目指しています。", :name => "description"}/
+-#     %meta{:content => "ライフスポーツ, life, sports, スポーツ, ライフ", :name => "keywords"}/
+-#     %meta{:content => "ライフスポーツ", :property => "og:title"}/
+-#     %meta{:content => "website", :property => "og:type"}/
+-#     %meta{:content => "https://lifesports.jp", :property => "og:url"}/
+-#     %meta{:content => "ライフスポーツ", :property => "og:site_name"}/
+-#     %meta{:content => "「Life SPORTS」は、スマートフォンでスポーツイベントや習い事、施設などが簡単に探せる『スポーツマッチングアプリ』です。", :property => "og:description"}/
+-#     %meta{:content => "ja_JP", :property => "og:locale"}/
+-#     %meta{:content => "https://lifesports.jp/image/thumbnail.png", :property => "og:image"}/
+-#     / common
+-#     %link{:href => "./image/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+-#     %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :rel => "stylesheet"}/
+-#     %link{:href => "./css/common.css", :rel => "stylesheet"}/
+-#     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
+-#     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
+-#     / index
+-#     %link{:href => "./css/index.css", :rel => "stylesheet"}/
+-#   %body
+-#     / Google Tag Manager (noscript)
+-#     %noscript
+-#       %iframe{:height => "0", :src => "https://www.googletagmanager.com/ns.html?id=GTM-NFQWJVF", :style => "display:none;visibility:hidden", :width => "0"}
+-#     / End Google Tag Manager (noscript)
+-#     .body
+-#       / header
+-#       %header
+-#         .header-container
+-#           .header-logo
+-#             %a{:href => "index.html"}
+-#               %img.header-banner{:src => "./image/logo.png"}/
+-#           .header-list
+-#             %ul
+-#               %li
+-#                 %a.header-item{:href => "index.html#mission"} ミッション
+-#               %li
+-#                 %a.header-item{:href => "index.html#ag"} 行動指針
+-#               %li
+-#                 %a.header-item{:href => "index.html#service"} サービス
+-#               %li
+-#                 %a.header-item{:href => "index.html#company"} 会社概要
+-#               %li
+-#                 %a.header-item{:href => "contact.html"} お問い合わせ
+-#               %li
+-#                 %a.header-item{:href => "recruit.html", :target => "_blank"}
+-#                   募集サイト
+-#                   %span.icon
+-#                     %img{:src => "./image/icon_link.png"}/
+-#       / vision
+-#       .vision
+-#         .vision-text
+-#           %h2
+-#             気軽にスポーツができる
+-#             %br>/
+-#             世の中を創る
+-#         .store-link{:align => "center"}
+-#           %a{:href => "https://itunes.apple.com/us/app/life-sports-supotsu-zhong/id1146392018?l=ja&ls=1&mt=8"}
+-#             %img.top-appstore{:src => "./image/appstore_link.png"}/
+-#           %a{:href => "https://play.google.com/store/apps/details?id=jp.lifesports"}
+-#             %img.top-playstore{:src => "./image/playstore_link.png"}/
+-#       / mission
+-#       #mission.mission
+-#         .mission-titles.titles
+-#           %p.mission-title.title ミッション
+-#           %p.mission-subtitle.subtitle Corporate Mission
+-#         .mission-content
+-#           .col-sm-4.content-part
+-#             %img{:src => "./image/img_mission1_1.png", :width => "95%"}/
+-#           .col-sm-4.content-part
+-#             %img{:src => "./image/img_mission2_2.png", :width => "95%"}/
+-#           .col-sm-4.content-part
+-#             %img{:src => "./image/img_mission3_3.png", :width => "95%"}/
+-#           .float
+-#         .mission-text
+-#           %p.mission-text
+-#             現在、多くの人が運動不足・健康に問題意識を持っていますが、実際にスポーツをしている人はまだまだ少ないと感じています。スポーツや運動に対する「やりたいけど、できない」という現状があると感じています。
+-#             %br/
+-#             %br/
+-#             Life SPORTSを通じて、より多くの人にスポーツの楽しさを伝え、気軽にスポーツができる世の中を創ることで変えていきたいと考えています。
+-#             %br/
+-#             %br/
+-#             気軽にスポーツができる世の中になれば、海外から日本に来た外国人と日本人が一緒にスポーツをしたり、逆に日本人が海外に行った際に現地の人と自由にスポーツを通じてコミュニケーションをとったりできるような世界になると信じています。
+-#       / Action guideline
+-#       #ag.ag
+-#         .ag-titles.titles
+-#           %p.ag-title.title 行動指針
+-#           %p.ag-subtitle.subtitle Action Guidelines
+-#         .ag-list.row
+-#           .col-sm-3.col-xs-6
+-#             .ag-content.ag-1
+-#               %p.guide-content-title
+-#                 想いがひとを
+-#                 %br>/
+-#                 情熱がチームを
+-#               %p.guide-content-text
+-#                 想いで、人を惹きつけよう。チームの情熱でビジョンを目指そう。
+-#           .col-sm-3.col-xs-6
+-#             .ag-content.ag-2
+-#               %p.guide-content-title
+-#                 違いが強み
+-#                 %br>/
+-#                 集まれば革新
+-#               %p.guide-content-text
+-#                 個性に勝るスキルはない。個性を集めて成し遂げよう。
+-#           .col-sm-3.col-xs-6
+-#             .ag-content.ag-3
+-#               %p.guide-content-title
+-#                 プロダクトで
+-#                 %br>/
+-#                 魅了せよ
+-#               %p.guide-content-text
+-#                 納得できるプロダクトを世に出そう。1人でも多くのユーザーをファンにしよう。
+-#           .col-sm-3.col-xs-6
+-#             .ag-content.ag-4
+-#               %p.guide-content-title
+-#                 地図にもない道を
+-#                 %br>/
+-#                 探せ
+-#               %p.guide-content-text
+-#                 固定概念や常識にとらわれず、手法を洗い出そう。そして常に最短距離を歩こう。
+-#           .col-sm-3.col-xs-6
+-#             .ag-content.ag-5
+-#               %p.guide-content-title
+-#                 そこは歓声が
+-#                 %br>/
+-#                 聴こえるか
+-#               %p.guide-content-text
+-#                 本当にそれが本質か考えよう。本質の積み重ねでユーザーの満足度をあげよう。
+-#           .col-sm-3.col-xs-6
+-#             .ag-content.ag-6
+-#               %p.guide-content-title
+-#                 本当に好きな仕事は
+-#                 %br>/
+-#                 自分にしか創れない
+-#               %p.guide-content-text
+-#                 価値のある仕事を創ろう。オンリーワンの仕事を目指そう。
+-#           .col-sm-3.col-xs-6
+-#             .ag-content.ag-7
+-#               %p.guide-content-title
+-#                 覚悟無くして
+-#                 %br>/
+-#                 決断なし
+-#               %p.guide-content-text
+-#                 日々の努力が自信になり、そして覚悟が持てる。その決断の積み重ねが成長につながる。
+-#       / service
+-#       #service.service
+-#         .service-titles.titles.text-center
+-#           %p.service-title.title サービス
+-#           %p.service-subtitle.sub-title Service "Life SPORTS"
+-#         .row
+-#           .col-sm-5
+-#             .service-content
+-#               %h1 スポーツマッチングアプリ
+-#               .service-image
+-#                 %img.service-image{:src => "./image/logo.png"}/
+-#               %p.service-text
+-#                 「Life SPORTS」は、スマートフォンでイベントや習い事、施設などが簡単に探せる『スポーツマッチングアプリ』です。
+-#                 %br/
+-#                 %br/
+-#                 自身が行いたいスポーツの参加者を募ったり、他のユーザーが募集しているスポーツイベントに参加したり、初心者から上級者まで、いっしょにスポーツをする仲間や対戦チームを簡単に探すことができます。また位置情報を軸に、全国のスポーツ施設やスポーツスクール・習い事も簡単に探すことができます。
+-#                 %br/
+-#                 %br/
+-#                 スポーツマッチングを通じて新しい交流関係や興味のあるスポーツを発見できる場としてもご利用いただけます。
+-#           .col-sm-7
+-#             .phones
+-#               .phone
+-#                 %img.phone-img{:src => "./image/phones.png"}/
+-#               .links
+-#                 %a{:href => "https://itunes.apple.com/us/app/life-sports-supotsu-zhong/id1146392018?l=ja&ls=1&mt=8"}
+-#                   %img.service-appstore{:src => "./image/appstore_link.png"}/
+-#                 %a{:href => "https://play.google.com/store/apps/details?id=jp.lifesports"}
+-#                   %img.service-playstore{:src => "./image/playstore_link.png"}/
+-#       / company
+-#       #company.company
+-#         .company-titles.titles
+-#           %p.company-title.title 会社概要
+-#           %p.company-subtitle.sub-title Company Overview
+-#         .company-table
+-#           %table{:align => "center"}
+-#             %tr
+-#               %th{:align => "right"} 会社名
+-#               %td 株式会社ライフスポーツ Lifesport.Inc
+-#             %tr
+-#               %th{:align => "left"} 代表取締役
+-#               %td 中村 俊一
+-#             %tr
+-#               %th 本社
+-#               %td
+-#                 〒153-0044
+-#                 %br/
+-#                 東京都目黒区大橋1-5-1-2123
+-#             %tr
+-#               %th 開発拠点
+-#               %td
+-#                 〒150-0013
+-#                 %br>/
+-#                 東京都渋谷区恵比寿4-3-1 クイズ恵比寿804
+-#             %tr
+-#               %th{:align => "right"} 事業内容
+-#               %td
+-#                 メディア事業
+-#                 %br>/
+-#                 webアプリケーション開発
+-#                 %br>/
+-#                 スポーツ用品の販売及びレンタル
+-#                 %br>/
+-#                 スポーツ施設の利用促進事業
+-#                 %br>/
+-#                 インターネット広告事業
+-#             %tr
+-#               %th{:align => "right"} 資本金
+-#               %td 2,300万円（資本準備金含む）
+-#             %tr
+-#               %th{:align => "right"} 設立日
+-#               %td 2016年2月17日
+-#             %tr
+-#               %th{:align => "right"} 取引先
+-#               %td
+-#                 みずほ銀行 渋谷支店
+-#                 %br>/
+-#                 辻・本郷税理士法人
+-#         .contact-btn
+-#           %a.square_btn{:href => "contact.html"}
+-#             %span お問い合わせはこちら
+-#       .recruit
+-#         .rec-blank
+-#         .recruit-btn
+-#           %a{:href => "recruit.html"}
+-#             .square_btn Recruit Imformation
+-#       / footer
+-#       %footer
+-#         .footer-container
+-#           .footer-right
+-#             %ul
+-#               %li
+-#                 %a.footer-item{:href => "index.html#mission"} ミッション
+-#               %li
+-#                 %a.footer-item{:href => "index.html#ag"} 行動指針
+-#               %li
+-#                 %a.footer-item{:href => "index.html#service"} サービス
+-#               %li
+-#                 %a.footer-item{:href => "index.html#company"} 会社概要
+-#               %li
+-#                 %a.footer-item{:href => "contact.html"} お問い合わせ
+-#               %li
+-#                 %a.footer-item{:href => "recruit.html", :target => "_blank"}
+-#                   募集サイト
+-#                   %span.icon
+-#                     %img{:src => "./image/icon_link.png"}/
+-#           .footer-left
+-#             %p Copyright (C) 2016 Lifesports Inc. All Rights Reserved
+-#           .footer-clear

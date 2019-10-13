@@ -3,7 +3,7 @@
     %h1 Welcome
     = form_with  model: @user, url:new_user_registration_path, method: :get, class: '', local: true do |f|
       .form
-        = link_to'/users/sign_up', class: '' do
+        = link_to new_user_registration_path, class: '' do
           Sign up
         = f.email_field :email, autofocus: true, autocomplete: "email", class: "", placeholder:"E-mail"
         = f.password_field :password, autofocus: true, autocomplete: "password", class: "", placeholder:"Password"
