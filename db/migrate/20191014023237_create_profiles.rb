@@ -4,8 +4,8 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
 
       t.string :old,              null: false, default: ""
       t.string :gender,              null: false, default: ""
-      t.string :message,              null: false, default: ""
-      t.bigint :prefecture_id, null: false, foreign_key: true
+      t.string :message
+      t.string :prefecture_id
       t.integer :user_id, null: false
       
       t.timestamps

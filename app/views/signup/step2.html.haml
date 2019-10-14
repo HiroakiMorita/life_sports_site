@@ -1,0 +1,31 @@
+.single-container
+  %main.single-main
+    %section.l-single-container
+      %h3.l-single-head.registration 会員情報入力
+      = form_with  model: @profile, url:signup_index_path, method: :post, class: '', local: true do |f|
+
+        .l-single-content
+          .form-group
+            = f.label "性別"
+            %span.form-require 必須
+            .field-input              
+              = f.text_field :gender, autofocus: true, autocomplete: "gender",class:"input-default",placeholder: "男"
+
+          .form-group
+            = f.label "メッセージ"
+            %span.form-require 必須
+            .field-input   
+              = f.text_field :message, autofocus: true, autocomplete: "message",class:"input-default",placeholder: "こんにちは"
+            
+          .form-group
+            = f.label "都道府県"   
+            %span.form-require 必須
+            .field-input
+              = f.text_field :prefecture_id, autofocus: true, autocomplete: "prefecture_id",class:"input-default",placeholder: "東京都"
+          
+        .l-single-content  
+          %input{type: "hidden", name: "after_save_callback", value:"/jp/"}
+            %p.l-single-text.text-center
+          = f.submit "登録", class: "btn-default btn-red"
+          .form-group.text-right__content
+            %i.icon-arrow-right
