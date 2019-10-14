@@ -26,12 +26,18 @@
             %span.form-require 必須
             = f.password_field :password_confirmation, autofocus: true, autocomplete: "password_confirmation", class: "input-default", placeholder:"7文字以上"
 
+
         .l-single-content__profile
           = fields_for @profile,url: step2_signup_index_path,method: :get, class: '', local: true do |o|
             .form-group
               = o.label "年齢"
               %span.form-require 必須
-              = o.text_field :old, autofocus: true, autocomplete: "old", class: "input-default", placeholder:"30歳"
+              = o.collection_select :old, Old.all, :id, :name, { prompt: "---" }, class: "input-default"
+            
+            .form-group
+              = o.label "性別"
+              %span.form-require 必須
+              = o.select :gender, Profile.genders.keys.to_a, { prompt: "---" }, class: "input-default"     
           
         .l-single-content  
           %input{type: "hidden", name: "after_save_callback", value:"/jp/"}

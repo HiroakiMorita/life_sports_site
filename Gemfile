@@ -77,3 +77,7 @@ gem 'jquery-rails'
 
 # font-awesome導入
 gem 'font-awesome-rails', '4.7.0.5'
+
+# active_hash導入
+gem 'active_hash'
+gem 'enum_help'
