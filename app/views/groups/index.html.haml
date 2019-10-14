@@ -63,33 +63,39 @@
         .main-visual
           .main-visual__content--wrap
             .main-bg
-              .main-theme
-              = image_tag "bg_top_pc.jpg"
+              .main-theme.vision
+                %h2 気軽にスポーツが出来る 世の中を創る
+                .main-theme.vision__text
+                  = image_tag "appstore_link.png"
+                  = image_tag "playstore_link.png"
 
       %section.second-section
         .main-visual
           .main-visual__content--wrap
             .main-bg
-              .main-theme
-              %h2 野球
-              = image_tag "20190713_02.jpg"
-
+              .main-theme.vision__baseball
+                %h2 野球
       %section.third-section
         .main-visual
           .main-visual__content--wrap
             .main-bg
-              .main-theme
-              %h2 水泳
-              = image_tag "main_img.jpg",height:"180px"
+              .main-theme.vision__swim
+                %h2 水泳
 
       %section.fourth-section
         .main-visual
           .main-visual__content--wrap
             .main-bg
-              .main-theme
-              %h2 サッカー
-              = image_tag "20180711170309.jpg",height:"180px"
-              = image_tag "bg_recruit_pc.jpg"
+              .main-theme.vision__football
+                %h2 サッカー
+              .main-theme.vision__footer
+              .main-theme.vision__phone
+                = image_tag "phones.png", height:"200px"
+                .main-theme.vision__text
+                  = image_tag "appstore_link.png",height:"30px"
+                  = image_tag "playstore_link.png",height:"30px"
+
+        -# = image_tag "bg_recruit_pc.jpg"
 
     = render partial:"groups/footer"
 
