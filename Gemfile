@@ -67,8 +67,13 @@ gem 'devise'
 gem 'pry-rails'
 gem 'pry-byebug'
 gem 'pry-doc'
+
+# sitemap導入
 gem 'sitemap_generator'
 
 # bootstrap導入
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+
+# font-awesome導入
+gem 'font-awesome-rails', '4.7.0.5'

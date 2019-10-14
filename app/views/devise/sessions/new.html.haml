@@ -5,6 +5,14 @@
       .form
         = link_to new_user_registration_path, class: '' do
           Sign up
+          %button{id: "facebook-login", class: "btn-sns-facebook" }
+            = link_to'/', method: :post, class: 'btn-sns-facebook' do
+              = fa_icon "facebook-square"
+              Facebookでログイン
+          %button{id: "google-login", class: "" }
+            = link_to'/', method: :post, class: 'google' do
+              =image_tag 'google.svg', alt: '', height: '45', width: '60',class: "google-logo"
+              Googleでログイン
         = f.email_field :email, autofocus: true, autocomplete: "email", class: "", placeholder:"E-mail"
         = f.password_field :password, autofocus: true, autocomplete: "password", class: "", placeholder:"Password"
         = f.submit "Login", class: "", id: "login-button"

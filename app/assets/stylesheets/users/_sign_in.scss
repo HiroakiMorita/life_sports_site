@@ -205,3 +205,19 @@ form button:hover {
             transform: translateY(-700px) rotate(600deg);
   }
 }
+.btn-sns-facebook {
+  margin: 16px 0 0;
+  background: #385185;
+
+  &:first-child {
+  margin: 0;
+  }
+  
+}
+.fa-facebook-square{
+  font-family: 'icon-font';
+  font-size: 26px;
+  &:before {
+    content: '\e014';
+  }
+}
