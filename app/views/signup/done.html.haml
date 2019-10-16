@@ -1,0 +1,14 @@
+.header-logo__wrap
+  = link_to'/', target: "" do
+    = image_tag "logo.png", height:"30px"
+
+.single-container
+  %main.single-main
+    %section.l-single-container
+      %h3.l-single-head.registration 会員情報入力
+      = form_with  model: @user, url:signup_index_path, class: 'input-default', local: true do |f|
+        .l-single-content
+          .form-group
+          %p.comment ありがとうございます。
+          %p.comment 会員登録が完了しました。
+          = link_to 'サイトを始める', root_path, class:'btn-default btn-red'

@@ -1,26 +1,36 @@
-.wrapper
-  .container
-    %h1 Welcome
-    = form_with  model: @user, url:new_user_registration_path, method: :get, class: '', local: true do |f|
-      .form
-        = link_to new_user_registration_path, class: '' do
-          Sign up
+.header-logo__wrap
+  = link_to'/', target: "" do
+    = image_tag "logo.png", height:"30px"
+
+  .wrapper
+    .container
+      %h1 Welcome
+      = form_for(resource, as: resource_name, url: session_path(resource_name), ) do |f|
+        .form
+          = link_to new_user_registration_path, class: '' do
+            新規会員登録
+            = link_to'/', method: :post, class: 'btn-sns-facebook' do
+              = fa_icon "facebook-square"
+              Facebookでログイン
+            = link_to'/', method: :post, class: 'google' do
+              =image_tag 'google.svg', alt: '', height: '45', width: '60',class: "google-logo"
+              Googleでログイン
         = f.email_field :email, autofocus: true, autocomplete: "email", class: "", placeholder:"E-mail"
         = f.password_field :password, autofocus: true, autocomplete: "password", class: "", placeholder:"Password"
         = f.submit "Login", class: "", id: "login-button"
-    %ul.bg-bubbles
-      %li
-      %li
-      %li
-      %li
-      %li
-      %li
-      %li
-      %li
-      %li
-      %li
-      %li
-      %li
+      %ul.bg-bubbles
+        %li
+        %li
+        %li
+        %li
+        %li
+        %li
+        %li
+        %li
+        %li
+        %li
+        %li
+        %li
 
 
 -# %h2 Log in

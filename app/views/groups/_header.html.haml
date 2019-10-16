@@ -1,0 +1,23 @@
+%body
+  - if user_signed_in?
+    %header.cmn-header__pc-mode
+      .nav-pc
+        %ul.nav-pc__on
+          %li.nav-pc__on--child.nav-blank
+            = link_to destroy_user_session_path, method: :delete, class: 'btn btn-danger' do
+              ログアウト
+          %li.nav-pc__on--child.nav-blank
+            = link_to mypage_index_path, method: :get, class: 'btn btn-primary' do
+              マイページ
+  - else
+    %header.cmn-header__pc-mode
+      .cmn-header__bg--wrap
+        .cmn-header__wrap
+          .nav-pc
+            %ul.nav-pc__on
+              %li.nav-pc__on--child.nav-blank
+                = link_to new_user_registration_path, class: 'btn btn-primary' do
+                  新規登録
+              %li.nav-pc__on--child.nav-blank
+                = link_to user_session_path, class: 'btn btn-success' do
+                  ログイン画面

@@ -1,0 +1,51 @@
+.header-logo__wrap
+  = link_to'/', target: "" do
+    = image_tag "logo.png", height:"30px"
+
+.single-container
+  %main.single-main
+    %section.l-single-container
+      %h3.l-single-head.registration 会員情報入力
+      = form_with  model: @user, url:step2_signup_index_path, method: :get, class: '', local: true do |f|
+
+        .l-single-content
+          .form-group
+            = f.label "ニックネーム"
+            %span.form-require 必須
+            .field-input              
+              = f.text_field :nickname, autofocus: true, autocomplete: "nickname",class:"input-default",placeholder: "モリタ"
+
+          .form-group
+            = f.label "メールアドレス"
+            %span.form-require 必須
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: "input-default", placeholder:"PC・携帯どちらでも可"
+            
+          .form-group
+            = f.label "パスワード"
+            %span.form-require 必須
+            = f.password_field :password, autofocus: true, autocomplete: "password", class: "input-default", placeholder:"7文字以上"
+          
+          .form-group
+            = f.label "パスワード(確認用)"
+            %span.form-require 必須
+            = f.password_field :password_confirmation, autofocus: true, autocomplete: "password_confirmation", class: "input-default", placeholder:"7文字以上"
+
+
+        .l-single-content__profile
+          = fields_for @profile,url: step2_signup_index_path,method: :get, class: '', local: true do |o|
+            .form-group
+              = o.label "年齢"
+              %span.form-require 必須
+              = o.collection_select :old, Old.all, :id, :name, { prompt: "---" }, class: "input-default"
+            
+            .form-group
+              = o.label "性別"
+              %span.form-require 必須
+              = o.select :gender, Profile.genders.keys.to_a, { prompt: "---" }, class: "input-default"     
+          
+        .l-single-content  
+          %input{type: "hidden", name: "after_save_callback", value:"/jp/"}
+            %p.l-single-text.text-center
+          = f.submit "次へ進む", class: "btn-default btn-red"
+          .form-group.text-right__content
+            %i.icon-arrow-right

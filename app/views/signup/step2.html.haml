@@ -1,0 +1,40 @@
+.header-logo__wrap
+  = link_to'/', target: "" do
+    = image_tag "logo.png", height:"30px"
+
+.single-container
+  %main.single-main
+    %section.l-single-container
+      %h3.l-single-head.registration 会員情報入力
+      = form_with  model: @profile, url:signup_index_path, method: :post, class: '', local: true do |o|
+
+        .l-single-content
+          .form-group
+            = o.label "お仕事"
+            %span.form-require 必須
+            .field-input
+              = o.select :job, Profile.jobs.keys.to_a, { prompt: "---" }, class: "input-default"
+
+          .form-group
+            = o.label "休暇日"
+            %span.form-require 必須
+            .field-input
+              = o.select :holiday, Profile.holidays.keys.to_a, { prompt: "---" }, class: "input-default"
+            
+          .form-group
+            = o.label "都道府県"   
+            %span.form-require 必須
+            = o.collection_select :prefecture_id, Prefecture.all, :id, :name, { prompt: "---" }, class: "input-default"
+
+          .form-group
+            = o.label "メッセージ"
+            %span.form-require 任意
+            .field-input   
+              = o.text_field :message, autofocus: true, autocomplete: "message",class:"input-default",placeholder: "こんにちは"
+          
+        .l-single-content  
+          %input{type: "hidden", name: "after_save_callback", value:"/jp/"}
+            %p.l-single-text.text-center
+          = o.submit "登録", class: "btn-default btn-red"
+          .form-group.text-right__content
+            %i.icon-arrow-right
