@@ -5,102 +5,124 @@
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
     %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
     %title Life SPORTS
-  %body
-    - if user_signed_in?
-      %header.cmn-header__pc-mode
-        .nav-pc
-          %ul.nav-pc__on
-            %li.nav-pc__on--child.nav-blank
-              = link_to destroy_user_session_path, method: :delete, class: '' do
-                ログアウト
-    - else
-      %header.cmn-header__pc-mode
-        .cmn-header__bg--wrap
-          .cmn-header__wrap
-            .nav-pc
-              %ul.nav-pc__on
-                %li.nav-pc__on--child.nav-blank
-                  = link_to new_user_registration_path, class: '' do
-                    新規登録
-                %li.nav-pc__on--child.nav-blank
-                  = link_to user_session_path, class: '' do
-                    ログイン画面
 
-            .header-logo__wrap
-              = link_to'/', target: "_blank" do
-                = image_tag "logo.png", height:"40px"
-            
-            .nav-pc__under
-              %ul.nav-pc__main
-                %li.nav-pc__main--child.category
-                  = link_to'/', class: 'nav-pc__link strong' do
-                    カテゴリ
+    = render partial:"groups/header"
 
-                .menu-dropdown.oral
-                  .menu-dropdown__wrap
-                    .menu-dropdown__button--wrap
-                      = link_to'/', class: 'menu-dropdown__button' do
-                        = image_tag "/",class: 'rollover-on', alt:'position:absolute; opacity:0; z-index:2;'
-                        = image_tag "/",class: 'rollover', alt:'野球'
-                        %span 野球
-                      = link_to'/', class: 'menu-dropdown__button' do
-                        = image_tag "/",class: 'rollover-on', alt:'position:absolute; opacity:0; z-index:2;'
-                        = image_tag "/",class: 'rollover', alt:'野球'
-                        %span サッカー
-                      = link_to'/', class: 'menu-dropdown__button' do
-                        = image_tag "/",class: 'rollover-on', alt:'position:absolute; opacity:0; z-index:2;'
-                        = image_tag "/",class: 'rollover', alt:'野球'
-                        %span 水泳
-
-                %li.nav-pc__main--child.space
-                  = link_to'/', class: 'nav-pc__link strong' do
-                    場所
-                %li.nav-pc__main--child.space
-                  = link_to'/', class: 'nav-pc__link strong' do
-                    仲間
-                %li.nav-pc__main--child.space
-                  = link_to'/', class: 'nav-pc__link strong' do
-                    aaa
-                %li.nav-pc__main--child.space
-                  = link_to'/', class: 'nav-pc__link strong' do
-                    bbb
-
-    %main.main
-      %section.first-section
-        .main-visual
-          .main-visual__content--wrap
-            .main-bg
-              .main-theme.vision
-                %h2 気軽にスポーツが出来る 世の中を創る
-                .main-theme.vision__text
-                  = image_tag "appstore_link.png"
-                  = image_tag "playstore_link.png"
-
-      %section.second-section
-        .main-visual
-          .main-visual__content--wrap
-            .main-bg
-              .main-theme.vision__baseball
-                %h2 野球
-      %section.third-section
-        .main-visual
-          .main-visual__content--wrap
-            .main-bg
-              .main-theme.vision__swim
-                %h2 水泳
-
-      %section.fourth-section
-        .main-visual
-          .main-visual__content--wrap
-            .main-bg
-              .main-theme.vision__football
-                %h2 サッカー
-              .main-theme.vision__footer
-              .main-theme.vision__phone
-                = image_tag "phones.png", height:"200px"
-                .main-theme.vision__text
-                  = image_tag "appstore_link.png",height:"30px"
-                  = image_tag "playstore_link.png",height:"30px"
+    .header-logo__wrap
+      = link_to'/', target: "" do
+        = image_tag "logo.png", height:"30px"
+    
+    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      %a.navbar-brand{:href => "/"} 一覧
+      %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        %ul.navbar-nav.mr-auto
+          %li.nav-item.active
+            %a.nav-link{:href => "/"}
+              Home
+              %span.sr-only (current)
+          %li.nav-item
+            %a.nav-link{:href => "/"} Link
+          %li.nav-item.dropdown
+            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              カテゴリ
+            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+              %a.dropdown-item{:href => "/"} 野球
+              %a.dropdown-item{:href => "/"} サッカー
+              .dropdown-divider
+              %a.dropdown-item{:href => "/"} 水泳
+          %li.nav-item.dropdown
+            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              場所
+            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+              %a.dropdown-item{:href => "/"} 球場
+              %a.dropdown-item{:href => "/"} アリーナ
+              .dropdown-divider
+              %a.dropdown-item{:href => "/"} その他
+          %li.nav-item.dropdown
+            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              仲間
+            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+              %a.dropdown-item{:href => "/"} 遊び
+              %a.dropdown-item{:href => "/"} 真剣
+              .dropdown-divider
+              %a.dropdown-item{:href => "/"} その他
+          %li.nav-item.dropdown
+            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              その他
+            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+              %a.dropdown-item{:href => "/"} Q&A
+              %a.dropdown-item{:href => "/"} ...
+              .dropdown-divider
+              %a.dropdown-item{:href => "/"} ...
+          %li.nav-item
+            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} XXX
+        %form.form-inline.my-2.my-lg-0
+          %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+          %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
 
 
-    = render partial:"groups/footer"
+
+
+
+    -# .nav-pc__under
+    -#   %ul.nav-pc__main
+    -#     %li.nav-pc__main--child.category
+    -#       = link_to'/', class: 'nav-pc__link strong' do
+    -#         カテゴリ
+
+    -#     %li.nav-pc__main--child.space
+    -#       = link_to'/', class: 'nav-pc__link strong' do
+    -#         場所
+    -#     %li.nav-pc__main--child.space
+    -#       = link_to'/', class: 'nav-pc__link strong' do
+    -#         仲間
+    -#     %li.nav-pc__main--child.space
+    -#       = link_to'/', class: 'nav-pc__link strong' do
+    -#         aaa
+    -#     %li.nav-pc__main--child.space
+    -#       = link_to'/', class: 'nav-pc__link strong' do
+    -#         bbb
+
+  #carouselExampleFade.carousel.slide.carousel-fade{"data-ride" => "carousel"}
+    .carousel-inner
+      .carousel-item.active
+        = image_tag "20190713_02.jpg",class:"d-block w-100",alt:"...",height:"350px"
+      .carousel-item
+        = image_tag "main_img.jpg",class:"d-block w-100",alt:"...",height:"350px"
+      .carousel-item
+        = image_tag "maxresdefault.jpg",class:"d-block w-100",alt:"...",height:"350px"
+      .carousel-item
+        = image_tag "b602b4bffc5f3a0a01929ae2e1637417.jpg",class:"d-block w-100",alt:"...",height:"350px"
+    %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleFade", :role => "button"}
+      %span.carousel-control-prev{"aria-hidden" => "true"}
+      %span.sr-only Previous
+    %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleFade", :role => "button"}
+      %span.carousel-control-next{"aria-hidden" => "true"}
+      %span.sr-only Next
+
+    .slider_css
+      %ul
+        %li
+        %li
+        %li
+        %li
+        %li
+        
+      .main-theme.vision
+        %h2 気軽にスポーツが出来る 世の中を創る
+        -# .main-theme.vision__text
+          -# = image_tag "appstore_link.png"
+          -# = image_tag "playstore_link.png"
+
+    .main-theme.vision__footer
+    .main-theme.vision__phone
+      = image_tag "phones.png", height:"200px"
+      .main-theme.vision__text
+        = image_tag "appstore_link.png",height:"30px"
+        = image_tag "playstore_link.png",height:"30px"
+
+      = render partial:"groups/footer"
+
+

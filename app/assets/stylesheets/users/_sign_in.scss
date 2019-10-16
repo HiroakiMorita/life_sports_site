@@ -44,8 +44,8 @@ body :-ms-input-placeholder {
   top: 50%;
   left: 0;
   width: 100%;
-  height: 800px;
-  margin-top: -400px;
+  height: 500px;
+  margin-top: -300px;
   overflow: hidden;
 }
 .wrapper.form-success .container h1 {
@@ -70,7 +70,7 @@ form {
   z-index: 2;
 }
 form input {
-          appearance: none;
+  appearance: none;
   outline: 0;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.2);
@@ -208,7 +208,23 @@ form button:hover {
 .btn-sns-facebook {
   margin: 16px 0 0;
   background: #385185;
-
+  display: block;
+  margin: auto;
+  appearance: none;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 300;
   &:first-child {
   margin: 0;
   }
@@ -217,7 +233,28 @@ form button:hover {
 .fa-facebook-square{
   font-family: 'icon-font';
   font-size: 26px;
-  &:before {
-    content: '\e014';
-  }
+}
+.google{
+  margin: 16px 0 0;
+  background: #385185;
+  display: block;
+  margin: auto;
+  appearance: none;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 300;
+}
+.google-logo{
+  inline-size: auto;
 }

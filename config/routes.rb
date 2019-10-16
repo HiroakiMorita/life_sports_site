@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   resources :groups, only: [:new, :create, :edit, :update] 
 end
 
+  # マイページ
+  resources :mypage, only: [:index] do
+    member do
+      get :profile
+    end
+  end
+
     # 新規登録ページ
     resources :signup do
       collection do
