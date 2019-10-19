@@ -1,0 +1,18 @@
+.header-logo__wrap
+  .sidenav
+    = link_to mypage_path(@user), method: :get do
+      = fa_icon "user"
+      マイページ
+    = link_to edit_mypage_path(@user), method: :get do
+      = image_tag 'nickname.jpg',height: '30', width: '30',class:'user-icon'
+      プロフィール
+    = link_to "/" do
+      = fa_icon "comment"
+      メッセージ
+    = link_to "/" do
+      = fa_icon "envelope"
+      メール/パスワード
+    = link_to destroy_user_session_path, method: :delete do
+      = fa_icon "sign-out",alt:''
+      ログアウト
+  .main

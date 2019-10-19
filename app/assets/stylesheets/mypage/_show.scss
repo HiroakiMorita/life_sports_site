@@ -1,0 +1,24 @@
+h5{
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  
+}
+.profile_message{
+  background-color: beige;
+  height:400px;
+
+  &_corner{
+    // background-color: chocolate;
+
+      // margin: 2em auto;
+      padding: 1em;
+      width: 50%;
+      border: 5px dotted #f09199; /*太さ・線種・色*/
+      background-color: #fff; /* 背景色 */
+      border-radius: 1px; /*角の丸み*/
+      float: left;
+      margin-top: 20px;
+      height: 30%;
+  }
+}

@@ -1,0 +1,22 @@
+= render partial:"groups/header"
+= render partial:"side_bar", group:@user 
+
+.profile_content
+  = form_with  model: @profile, url:mypage_path, method: :patch, class: '', local: true do |f|
+    .profile_image
+      %h4 profile
+      .profile_image_nickname 
+      = image_tag 'back_image.jpg',class:'profile_img'
+      .profile_edit
+      = f.submit "profileを更新する", class: "profile_edit_button"
+      -# = link_to '編集', '/mypage/:id/edit', method: :get
+      = image_tag 'nickname2.jpg',class:'profile_img_nickname',height:'200',width:'200px'  
+      %h4 
+      = link_to current_user.nickname, '#', class:'profile_img_nickname'
+
+      .profile_detail
+        .profile_message
+          = text_area :profile, :message, class: 'message_area'
+          = f.select :job, Profile.jobs.keys.to_a, { prompt: "---" }, class: "input-default"
+
+      = render partial:"groups/footer"

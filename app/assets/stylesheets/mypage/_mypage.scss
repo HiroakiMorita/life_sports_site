@@ -1,0 +1,62 @@
+// Place all the styles related to the mypage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  // z-index: 1; /* Stay on top */
+  // top: 0; /* Stay at the top */
+  left: 0;
+  background-color: lightgoldenrodyellow;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  position: absolute;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 12px 10px 12px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: red;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.fa-user {
+  color: red($color: #000000);
+  font-size: 30px;
+}
+.user-icon{
+  border-radius:50%;
+}
+.fa-comment {
+  color: red($color: #000000);
+  font-size: 30px;
+}
+.fa-envelope {
+  color: red($color: #000000);
+  font-size: 30px;
+}
+.fa-sign-out{
+  color: red($color: #000000);
+  font-size: 30px;
+}

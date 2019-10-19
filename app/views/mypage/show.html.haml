@@ -1,0 +1,24 @@
+= render partial:"groups/header"
+= render partial:"side_bar", group: @user
+
+.profile_content
+  .profile_image
+    %h4 profile
+    .profile_image_nickname 
+    = image_tag 'back_image.jpg',class:'profile_img'
+    = image_tag 'nickname2.jpg',class:'profile_img_nickname',height:'200',width:'200px'
+    %h5.profile_message_area= current_user.nickname 
+
+    .profile_detail
+      .profile_message
+        .profile_message_corner
+          %h5.profile_message_area= @profile.message
+        .profile_message_corner
+          %h5.profile_message_area= @old.name
+        .profile_message_corner
+          %h5.profile_message_area= @profile.job
+        .profile_message_corner
+          %h5.profile_message_area= @profile.holiday
+
+
+      = render partial:"groups/footer"

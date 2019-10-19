@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'profiles/new'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -8,11 +9,17 @@ Rails.application.routes.draw do
 end
 
   # マイページ
-  resources :mypage, only: [:index] do
+  resources :mypage, only: [:index, :edit, :update, :destroy, :show] do
     member do
       get :profile
+      get :message
     end
   end
+
+  # マイページ
+  resources :profiles
+  #  only: [:index, :edit, :update, :destroy, :show] do
+  # end
 
     # 新規登録ページ
     resources :signup do

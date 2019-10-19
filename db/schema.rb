@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2019_10_14_023237) do
     t.string "old", default: "", null: false
     t.integer "gender", null: false
     t.text "message"
-    t.string "job", default: "", null: false
-    t.string "holiday", default: "", null: false
+    t.integer "job", null: false
+    t.integer "holiday", null: false
     t.bigint "prefecture_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false

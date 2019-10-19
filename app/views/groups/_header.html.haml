@@ -1,14 +1,16 @@
 %body
   - if user_signed_in?
     %header.cmn-header__pc-mode
-      .nav-pc
-        %ul.nav-pc__on
-          %li.nav-pc__on--child.nav-blank
-            = link_to destroy_user_session_path, method: :delete, class: 'btn btn-danger' do
-              ログアウト
-          %li.nav-pc__on--child.nav-blank
-            = link_to mypage_index_path, method: :get, class: 'btn btn-primary' do
-              マイページ
+      .cmn-header__bg--wrap
+        .cmn-header__wrap
+          .nav-pc
+            %ul.nav-pc__on
+              %li.nav-pc__on--child.nav-blank
+                = link_to destroy_user_session_path, method: :delete, class: 'btn btn-danger' do
+                  ログアウト
+              %li.nav-pc__on--child.nav-blank
+                = link_to mypage_index_path, method: :get, class: 'btn btn-primary' do
+                  マイページ
   - else
     %header.cmn-header__pc-mode
       .cmn-header__bg--wrap
@@ -21,3 +23,60 @@
               %li.nav-pc__on--child.nav-blank
                 = link_to user_session_path, class: 'btn btn-success' do
                   ログイン画面
+.header-logo__wrap
+  %h6
+    = link_to '/', class: '' do
+      %span Life Sports Site
+-# .text
+-#   .content
+-#   .dash
+
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  %a.navbar-brand{:href => "/"} 一覧
+  %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        %a.nav-link{:href => "/"}
+          Home
+          %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{:href => "/"} Link
+      %li.nav-item.dropdown
+        %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          カテゴリ
+        .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+          %a.dropdown-item{:href => "/"} 野球
+          %a.dropdown-item{:href => "/"} サッカー
+          .dropdown-divider
+          %a.dropdown-item{:href => "/"} 水泳
+      %li.nav-item.dropdown
+        %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          場所
+        .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+          %a.dropdown-item{:href => "/"} 球場
+          %a.dropdown-item{:href => "/"} アリーナ
+          .dropdown-divider
+          %a.dropdown-item{:href => "/"} その他
+      %li.nav-item.dropdown
+        %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          仲間
+        .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+          %a.dropdown-item{:href => "/"} 遊び
+          %a.dropdown-item{:href => "/"} 真剣
+          .dropdown-divider
+          %a.dropdown-item{:href => "/"} その他
+      %li.nav-item.dropdown
+        %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          その他
+        .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+          %a.dropdown-item{:href => "/"} Q&A
+          %a.dropdown-item{:href => "/"} ...
+          .dropdown-divider
+          %a.dropdown-item{:href => "/"} ...
+      %li.nav-item
+        %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"}
+    %form.form-inline.my-2.my-lg-0
+      %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search

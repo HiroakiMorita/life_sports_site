@@ -8,83 +8,6 @@
 
     = render partial:"groups/header"
 
-    .header-logo__wrap
-      = link_to'/', target: "" do
-        = image_tag "logo.png", height:"30px"
-    
-    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      %a.navbar-brand{:href => "/"} 一覧
-      %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
-        %span.navbar-toggler-icon
-      #navbarSupportedContent.collapse.navbar-collapse
-        %ul.navbar-nav.mr-auto
-          %li.nav-item.active
-            %a.nav-link{:href => "/"}
-              Home
-              %span.sr-only (current)
-          %li.nav-item
-            %a.nav-link{:href => "/"} Link
-          %li.nav-item.dropdown
-            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              カテゴリ
-            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-              %a.dropdown-item{:href => "/"} 野球
-              %a.dropdown-item{:href => "/"} サッカー
-              .dropdown-divider
-              %a.dropdown-item{:href => "/"} 水泳
-          %li.nav-item.dropdown
-            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              場所
-            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-              %a.dropdown-item{:href => "/"} 球場
-              %a.dropdown-item{:href => "/"} アリーナ
-              .dropdown-divider
-              %a.dropdown-item{:href => "/"} その他
-          %li.nav-item.dropdown
-            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              仲間
-            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-              %a.dropdown-item{:href => "/"} 遊び
-              %a.dropdown-item{:href => "/"} 真剣
-              .dropdown-divider
-              %a.dropdown-item{:href => "/"} その他
-          %li.nav-item.dropdown
-            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              その他
-            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-              %a.dropdown-item{:href => "/"} Q&A
-              %a.dropdown-item{:href => "/"} ...
-              .dropdown-divider
-              %a.dropdown-item{:href => "/"} ...
-          %li.nav-item
-            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} XXX
-        %form.form-inline.my-2.my-lg-0
-          %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
-
-
-
-
-
-    -# .nav-pc__under
-    -#   %ul.nav-pc__main
-    -#     %li.nav-pc__main--child.category
-    -#       = link_to'/', class: 'nav-pc__link strong' do
-    -#         カテゴリ
-
-    -#     %li.nav-pc__main--child.space
-    -#       = link_to'/', class: 'nav-pc__link strong' do
-    -#         場所
-    -#     %li.nav-pc__main--child.space
-    -#       = link_to'/', class: 'nav-pc__link strong' do
-    -#         仲間
-    -#     %li.nav-pc__main--child.space
-    -#       = link_to'/', class: 'nav-pc__link strong' do
-    -#         aaa
-    -#     %li.nav-pc__main--child.space
-    -#       = link_to'/', class: 'nav-pc__link strong' do
-    -#         bbb
-
   #carouselExampleFade.carousel.slide.carousel-fade{"data-ride" => "carousel"}
     .carousel-inner
       .carousel-item.active
@@ -112,9 +35,6 @@
         
       .main-theme.vision
         %h2 気軽にスポーツが出来る 世の中を創る
-        -# .main-theme.vision__text
-          -# = image_tag "appstore_link.png"
-          -# = image_tag "playstore_link.png"
 
     .main-theme.vision__footer
     .main-theme.vision__phone
