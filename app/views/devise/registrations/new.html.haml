@@ -1,6 +1,7 @@
 .header-logo__wrap
-  = link_to'/', target: "" do
-    = image_tag "logo.png", height:"30px"
+  %h6
+    = link_to '/', class: '' do
+      %span Life Sports Site
 
 
   .wrapper
@@ -8,11 +9,11 @@
       %h1 Welcome
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         .form
-          = link_to step1_signup_index_path, class: 'form input' do
+          = link_to step1_signup_index_path, class: 'mail-input' do
             メールアドレスで登録
-            = link_to'/', method: :post, class: 'btn-sns-facebook' do
-              = fa_icon "facebook-square"
-              Facebookで登録
+            = link_to'/', method: :post, class: 'btn-sns-twitter' do
+              = fa_icon "twitter"
+              Twitterで登録
             = link_to'/', method: :post, class: 'google' do
               =image_tag 'google.svg', alt: '', height: '45', width: '60',class: "google-logo"
               Googleで登録
@@ -33,7 +34,6 @@
         %li
         %li
         %li
-
 
 
 

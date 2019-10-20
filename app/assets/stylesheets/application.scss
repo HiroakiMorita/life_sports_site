@@ -19,12 +19,16 @@
 
 // setting
 @import "reset";
+@import "font-awesome";
 
 // signin,sginup
 @import "users/sign_in";
+@import "users/step1";
 
 // index
 @import "groups/index";
 
-// sign_up
-@import "users/step1";
+// mypage
+@import "mypage/mypage";
+@import "mypage/edit";
+@import "mypage/show";
