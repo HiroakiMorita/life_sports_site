@@ -1,5 +1,10 @@
 # README
 
+
+
+
+
+
 # sports_site DB設計
 ## usersテーブル
 |Column|Type|Options|
