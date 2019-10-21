@@ -5,6 +5,7 @@
 <p style="font-size: 23px">Life Sports Site</p>
 <br>
 
+![UNADJUSTEDNONRAW_thumb_60e](https://user-images.githubusercontent.com/53965957/67180230-ef6d8980-f413-11e9-8c3e-c57a840cf523.jpg)
 
 # テストユーザー
 email: sample@gmail.com<br>
