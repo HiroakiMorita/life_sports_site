@@ -1,24 +1,75 @@
 h5{
-  font-size: 14px;
+  font-size: 20px;
   color: #000;
   text-align: center;
   
 }
-.profile_message{
-  background-color: beige;
-  height:400px;
-
+.profile_detail{
+  background-color: darkcyan;
+  height:600px;
+  margin: 3em auto;
+  margin-right: 15%;
+  padding: 1.2em 1em 1em;
+  width: 50%;
+  background-color: #fff; /*BOX背景色 */
+  border: 2px solid #8d93c8; /* 枠線の太さ・色 */
+  box-shadow: 2px 2px 2px #ccc; /* 影の色 */
+  
   &_corner{
-    // background-color: chocolate;
 
-      // margin: 2em auto;
-      padding: 1em;
-      width: 50%;
-      border: 5px dotted #f09199; /*太さ・線種・色*/
-      background-color: #fff; /* 背景色 */
-      border-radius: 1px; /*角の丸み*/
-      float: left;
-      margin-top: 20px;
-      height: 20%;
+    .profile_message{
+      position: absolute;
+    display: inline-block;
+    top: -28px; /*タブ調整 */
+    left: -2px; /*タブ調整 */
+    padding: 1px 10px;
+    height: 26px;
+    font-weight: bold;
+    color: #fff; /* タイトル色 */
+    background-color: #8d93c8; /* タイトル背景色 */
+    border-radius: 8px 8px 0 0;
+
+      &_corner{
+          width: 50%;
+          float: left;
+          position: relative;
+          margin: 3em auto;
+          padding: 1.2em;
+          border: 2px solid #ff9ece; /* 枠線の太さ・色 */
+          color: #555555; /* 文字色 */
+          background-color: #fff;
+          box-shadow: 2px 2px 1px #c7c7c7;/* 影の色 */
+          border-radius: 8px; /* 角の丸み */
+          
+          &_introduction{
+            min-width: 100%;
+            min-height: 200px;
+            float: left;
+            position: relative;
+            margin: 3em auto;
+            padding: 1.2em;
+            border: 2px solid #ff9ece; /* 枠線の太さ・色 */
+            color: #555555; /* 文字色 */
+            background-color: #fff;
+            box-shadow: 2px 2px 1px #c7c7c7;/* 影の色 */
+            border-radius: 8px; /* 角の丸み */
+          }
+      }
+
+      &_area{
+        position: absolute;
+        left: 20px; /*（left）に変更すると左 */
+        top: -15px;
+        padding: 0 .5em;
+        font-weight: bold;
+        font-size: 1.1em;
+        color: #ff9ece; /* タイトル色 */
+        background-color: #fff;
+      }
+    }
   }
+}
+
+p.nomal{
+  word-wrap: break-word;
 }

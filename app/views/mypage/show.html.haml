@@ -7,20 +7,29 @@
     .profile_image_nickname 
     = image_tag 'back_image.jpg',class:'profile_img'
     = image_tag 'nickname2.jpg',class:'profile_img_nickname',height:'200',width:'200px'
-    %h5.profile_message_area= current_user.nickname 
+    %h4.profile_message_area= current_user.nickname 
 
     .profile_detail
-      .profile_message
+      .profile_detail_corner
+        .profile_message
+        %h5 プロフィール詳細
         .profile_message_corner
-          %h5.profile_message_area= @profile.message
+          %h5.profile_message_area 年齢
+          %span= @old.name
         .profile_message_corner
-          %h5.profile_message_area= @old.name
+          %h5.profile_message_area 職業
+          %span= @profile.job
         .profile_message_corner
-          %h5.profile_message_area= @profile.job
+          %h5.profile_message_area 休日
+          %span= @profile.holiday
         .profile_message_corner
-          %h5.profile_message_area= @profile.holiday
-        .profile_message_corner
-          %h5.profile_message_area= @prefecture.name
+          %h5.profile_message_area 居住地
+          %span= @prefecture.name
+
+      .profile_detail_corner
+        .profile_message_corner_introduction
+          %h5.profile_message_area 自己紹介
+          %span= @profile.message
 
 
-      = render partial:"groups/footer"
+    = render partial:"groups/footer"

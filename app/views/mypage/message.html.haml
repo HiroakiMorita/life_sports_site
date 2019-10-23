@@ -1,3 +1,10 @@
 = render partial:"groups/header"
+= render partial:"side_bar", group: @user
 
-      = render partial:"groups/footer"
+.profile_content
+  = form_with  model: @user, url:mypage_path, method: :patch, class: '', local: true do |f|
+    .profile_image
+      %h4 profile
+
+
+= render partial:"groups/footer"

@@ -6,7 +6,7 @@
     = link_to edit_mypage_path(@user), method: :get do
       = image_tag 'nickname.jpg',height: '30', width: '30',class:'user-icon'
       プロフィール
-    = link_to "/" do
+    = link_to message_mypage_path(@user), method: :get do
       = fa_icon "comment"
       メッセージ
     = link_to "/" do

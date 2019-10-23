@@ -3,6 +3,9 @@ class MypageController < ApplicationController
 
   def index
     @user = User.find(current_user.id)
+    # @profile = Profile.find(params[:id])
+    # @old = Old.find_by(id: @profile.old)
+    # @prefecture = Prefecture.find_by(id: @profile.prefecture_id)
     # binding.pry
   end
 
@@ -10,6 +13,10 @@ class MypageController < ApplicationController
   end
   
   def message
+    @user = User.find(current_user.id)
+    @profile = Profile.find(params[:id])
+    @old = Old.find_by(id: @profile.old)
+    @prefecture = Prefecture.find_by(id: @profile.prefecture_id)
   end
 
   def show
@@ -30,7 +37,8 @@ class MypageController < ApplicationController
     # binding.pry
     @profile = Profile.find(params[:id])
     @user = User.find(current_user.id)
-    if @profile.update(profile_params)
+    # binding.pry
+    if @profile.update(profile_params) && @user.update(user_params)
       redirect_to mypage_path(@user)
     else
       render :edit

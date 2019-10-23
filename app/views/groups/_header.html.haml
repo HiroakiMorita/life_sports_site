@@ -6,7 +6,7 @@
           .nav-pc
             %ul.nav-pc__on
               %li.nav-pc__on--child.nav-blank
-                = link_to destroy_user_session_path, method: :delete, class: 'btn btn-danger' do
+                = link_to destroy_user_session_path,data: { confirm: "ログアウトしてもよろしいですか？" }, method: :delete, class: 'btn btn-danger' do
                   ログアウト
               %li.nav-pc__on--child.nav-blank
                 = link_to mypage_index_path, method: :get, class: 'btn btn-primary' do
