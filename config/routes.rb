@@ -10,6 +10,7 @@ end
 
   # マイページ
   resources :mypage, only: [:index, :edit, :update, :destroy, :show] do
+    resources :comments, only: [:index, :create]
     member do
       get :profile
       get :message

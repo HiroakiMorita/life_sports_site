@@ -1,8 +1,8 @@
 = render partial:"groups/header"
-= render partial:"side_bar", group: @user
+-# = render partial:"mypage/side_bar", group: @user
 
 .chat-main
-  = form_with  model: @comment, url:mypage_comments_path(@user), method: :get, class: '', local: true do |f|
+  = form_with  model: @comment, url:mypage_comments_path, method: :post, class: '', local: true do |f|
     .chat-main__left-box
       %h5.main-header__left-box__current-group= current_user.nickname 
 
