@@ -22,6 +22,7 @@ class MypageController < ApplicationController
     @profile = Profile.find(params[:id])
     @old = Old.find_by(id: @profile.old)
     @prefecture = Prefecture.find_by(id: @profile.prefecture_id)
+    @comment = Comment.find_by(params[:mypage_id])
     # binding.pry
   end
 
@@ -60,7 +61,12 @@ class MypageController < ApplicationController
       :job,
       :holiday, 
       :prefecture_id
-      ).merge(user_id: current_user.id)
-    
+      ).merge(user_id: current_user.id)    
+  end
+  def comment_params
+    # binding.pry
+    params.require(:comment).permit(
+      :comment 
+      ).merge(user_id: current_user.id)    
   end
 end

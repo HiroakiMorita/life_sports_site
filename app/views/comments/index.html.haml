@@ -4,16 +4,26 @@
 .chat-main
   = form_with  model: @comment, url:mypage_comments_path, method: :post, class: '', local: true do |f|
     .chat-main__left-box
-      %h5.main-header__left-box__current-group= current_user.nickname 
+      %h5.main-header__left-box__current-group= current_user.nickname
 
     .chat-main__form
-      .chat-main__form__comment
-        = f.text_field :comment, class: 'chat-main__form__comment', placeholder: 'コメントを入力してください'
-        .chat-main__comment 
-          = f.label :image, class: 'chat-main__image' do
-            = fa_icon 'camera', class: 'icon'
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'chat-main__submit'
+      .message
+        .upper-message
+          .upper-message__date
+            %h5= @comment.created_at
+        .lower-message
+          - if @comment.comment.present?
+            %p.lower-message__content
+              = @comment.comment
+          = image_tag @comment.image.url, class: 'lower-message__image' if @comment.image.present?
+      .chat-main__form__area
+        .chat-main__form__comment
+          = f.text_field :comment, class: 'chat-main__form__comment', placeholder: 'コメントを入力してください'
+          .chat-main__comment 
+            = f.label :image, class: 'chat-main__image' do
+              = fa_icon 'camera', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'chat-main__submit'
 
 
     = render partial:"groups/footer"

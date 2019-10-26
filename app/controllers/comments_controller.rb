@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
     # @comments = current_user.id
     # binding.pry
     if @comment.save(comment_params) 
-      redirect_to mypage_comments_path(@user)
+      redirect_to mypage_comments_path
     else
       render mypage_comments_path(@user)
     end
