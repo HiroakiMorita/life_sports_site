@@ -1,10 +1,19 @@
 = render partial:"groups/header"
 = render partial:"side_bar", group: @user
 
-.profile_content
-  = form_with  model: @user, url:mypage_path, method: :patch, class: '', local: true do |f|
-    .profile_image
-      %h4 profile
+.chat-main
+  = form_with  model: @comment, url:mypage_comments_path(@user), method: :get, class: '', local: true do |f|
+    .chat-main__left-box
+      %h5.main-header__left-box__current-group= current_user.nickname 
+
+    .chat-main__form
+      .chat-main__form__comment
+        = f.text_field :comment, class: 'chat-main__form__comment', placeholder: 'コメントを入力してください'
+        .chat-main__comment 
+          = f.label :image, class: 'chat-main__image' do
+            = fa_icon 'camera', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'chat-main__submit'
 
 
-= render partial:"groups/footer"
+    = render partial:"groups/footer"
