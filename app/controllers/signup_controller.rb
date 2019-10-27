@@ -31,11 +31,19 @@ class SignupController < ApplicationController
   end
 
   def create
+    if session[:uid].present? && session[:provider].present?
+      password = Devise.friendly_token.first(7)
       @user = User.create(
       nickname: session[:nickname], # sessionに保存された値をインスタンスに渡す
       email: session[:email],
       password: session[:password]
       )
+      @sns = SnsCredential.create(
+        uid: session[:uid],
+        provider: session[:provider],
+        user_id: @user.id
+      )
+    end
       unless @user.save
         reset_session
         redirect_to signup_index_path
@@ -78,6 +86,7 @@ class SignupController < ApplicationController
   end
 
   def profile_params
+    # binding.pry
     params.require(:profile).permit(
       :old,
       :gender,
