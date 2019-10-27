@@ -10,10 +10,10 @@
         .form
           = link_to new_user_registration_path, class: 'mail-input' do
             新規会員登録
-            = link_to'/', method: :post, class: 'btn-sns-twitter' do
+            = link_to user_twitter_omniauth_authorize_path, method: :post, class: 'btn-sns-twitter' do
               = fa_icon "twitter"
               Twitterでログイン
-            = link_to'/', method: :post, class: 'google' do
+            = link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: 'google' do
               =image_tag 'google.svg', alt: '', height: '45', width: '60',class: "google-logo"
               Googleでログイン
         = f.email_field :email, autofocus: true, autocomplete: "email", class: "", placeholder:"E-mail"

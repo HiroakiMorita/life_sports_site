@@ -11,10 +11,10 @@
         .form
           = link_to step1_signup_index_path, class: 'mail-input' do
             メールアドレスで登録
-            = link_to'/', method: :post, class: 'btn-sns-twitter' do
+            = link_to user_twitter_omniauth_authorize_path, method: :post, class: 'btn-sns-twitter' do
               = fa_icon "twitter"
               Twitterで登録
-            = link_to'/', method: :post, class: 'google' do
+            = link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: 'google' do
               =image_tag 'google.svg', alt: '', height: '45', width: '60',class: "google-logo"
               Googleで登録
           -# = f.text_field :nickname, autofocus: true, autocomplete: "nickname",class:"",placeholder: "Nickname"
@@ -61,4 +61,3 @@
 -#     = f.password_field :password_confirmation, autocomplete: "new-password"
 -#   .actions
 -#     = f.submit "Sign up"
--# = render "devise/shared/links"
