@@ -46,7 +46,7 @@
             .form-group
               = o.label "性別"
               %span.form-require 必須
-              = o.select :gender, Profile.genders.keys.to_a, { prompt: "---" }, class: "input-default"     
+              = o.select :gender, Profile.genders.keys.to_a, { prompt: "---" }, class: "input-default"
           
         .l-single-content  
           %input{type: "hidden", name: "after_save_callback", value:"/jp/"}
