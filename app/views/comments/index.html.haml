@@ -6,11 +6,15 @@
     .chat-main__left-box
       %h5.main-header__left-box__current-group= current_user.nickname
 
+
     .chat-main__form
       .message{"data-comment-id": "#{@comment.id}"}
         .upper-message
           .upper-message__date
-            %h5= @comment.content
+          - @comments.each do |comment|
+            %h5= @user.nickname
+            %h5= comment.content
+            -# %h5= @comment.content
         -# .lower-message
         -#   - if @comment.content.present?
         -#     %p.lower-message__content

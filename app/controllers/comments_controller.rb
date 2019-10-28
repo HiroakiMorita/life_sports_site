@@ -2,12 +2,16 @@ class CommentsController < ApplicationController
   # before_action :set_group
 
   def index
+    # @user = User.all
+    @user = User.find_by(params[:user_id])
+    # binding.pry
+    # @users = User.where('name LIKE(?)', "%#{params[:keyword]}%").where.not(id: current_user.id)
     @comment = Comment.find_by(params[:id])
     # @comment = Comment.new
-    # @comments = Comment.all
+    @comments = Comment.all
     # @comments = Comment.find_by(params[:mypage_id])
     # binding.pry
-    # @comments = @group.comments.includes(:user)
+    # @comments = @comments.includes(:user)
   end
 
   
@@ -22,9 +26,9 @@ class CommentsController < ApplicationController
     # @comments = current_user.id
     # binding.pry
     if @comment.save(comment_params) 
-      redirect_to mypage_comments_path(@comment)
+      redirect_to mypage_comments_path
     else
-      render mypage_comments_path(@comment)
+      render mypage_comments_path
     end
     # @comment.group = Group.find(params[:group_id])
     # if @comment.save
