@@ -90,3 +90,8 @@ gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'omniauth'
 gem "omniauth-rails_csrf_protection"
+
+# 画像アップロード 
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'mini_magick'

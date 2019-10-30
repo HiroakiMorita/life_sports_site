@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
   def index
     # @user = User.all
-    @user = User.find_by(params[:user_id])
+    @user = User.find_or_initialize_by(params[:user_id])
     # binding.pry
     # @users = User.where('name LIKE(?)', "%#{params[:keyword]}%").where.not(id: current_user.id)
     @comment = Comment.find_by(params[:id])
