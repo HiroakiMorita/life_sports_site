@@ -154,44 +154,47 @@ ul {
   &__text{
     text-align: center;
   }
-  &__baseball{
-    background: image-url("20190713_02.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    padding-top: 175px;
-    &__text{
-      text-align: center;
-    }
-  }
-  &__swim{
-    background: image-url("main_img.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    padding-top: 175px;
-    margin-top: -300px;
-    &__text{
-      text-align: center;
-    }
-  }
-  &__football{
-    background: image-url("20180711170309.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    padding-top: 175px;
-    // margin-top: -400px;
-    &__text{
-      text-align: center;
-    }
-  }
+
+  // &__baseball{
+  //   background: image-url("20190713_02.jpg");
+  //   background-size: cover;
+  //   background-position: center;
+  //   height: 400px;
+  //   padding-top: 175px;
+  //   &__text{
+  //     text-align: center;
+  //   }
+  // }
+  // &__swim{
+  //   background: image-url("main_img.jpg");
+  //   background-size: cover;
+  //   background-position: center;
+  //   height: 300px;
+  //   padding-top: 175px;
+  //   margin-top: -300px;
+  //   &__text{
+  //     text-align: center;
+  //   }
+  // }
+  // &__football{
+  //   background: image-url("20180711170309.jpg");
+  //   background-size: cover;
+  //   background-position: center;
+  //   height: 300px;
+  //   padding-top: 175px;
+  //   // margin-top: -400px;
+  //   &__text{
+  //     text-align: center;
+  //   }
+  // }
+
   &__footer{
     background: image-url("bg_recruit_pc.jpg");
     background-size: cover;
     background-position: center;
     height: 300px;
     padding-top: 175px;
+    
     // margin-top: 20px;
     &__text{
       text-align: center;
@@ -200,12 +203,53 @@ ul {
   &__phone{
     text-align: center;
     margin-top:-270px;
+    // height: 200px;
   }
+
+  @media all and (max-width: 767px){
+    &__footer{
+      background: image-url("bg_recruit_pc.jpg");
+      background-size: contain;
+      // background-position: center;
+      height: 300px;
+      padding-top: 175px;
+      background-repeat: no-repeat;
+      // margin-top: 20px;
+      &__text{
+        text-align: center;
+        img {
+          height:50px;
+        }
+      }
+    }
+    &__phone{
+      text-align: center;
+      margin-top:-270px;
+      // width: 50px;
+      // height: auto;
+      img {
+        height:50px;
+      }
+    }
+   }
+
+   @media all and (max-width: 767px){
+    &__text{
+      text-align: center;
+      height: auto;
+    }
+   }
 }
 
 img {
   width: inherit;
 }
+// @media all and (max-width: 767px){
+// img {
+//   width: inherit;
+//   height: 90px;
+// }
+// }
 .main-text {
   padding-top: 175px;
 }
@@ -219,6 +263,14 @@ h2{
   margin: auto;
   line-height: 1.6;
   margin-top: -50px;
+}
+@media all and (max-width: 767px){
+  
+  h2{
+    font-size: 16px;
+    margin: 0;
+    margin-left: 25px;
+  }
 }
 footer {
   background-color: #333333;

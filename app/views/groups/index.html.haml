@@ -29,20 +29,20 @@
       %ul
         %li
         %li
-        %li
-        %li
-        %li
+        -# %li
+        -# %li
+        -# %li
         
       .main-theme.vision
         %h2 気軽にスポーツが出来る 世の中を創る
 
     .main-theme.vision__footer
     .main-theme.vision__phone
-      = image_tag "phones.png", height:"200px"
-      .main-theme.vision__text
-        = image_tag "appstore_link.png",height:"30px"
-        = image_tag "playstore_link.png",height:"30px"
+      = image_tag "phones.png", height:"200px", class: "main-theme.vision__phone"
+    .main-theme.vision__text
+      = image_tag "appstore_link.png",height:"30px", class: "image", class: "main-theme.vision__text"
+      = image_tag "playstore_link.png",height:"30px", class: "image", class: "main-theme.vision__text"
 
-      = render partial:"groups/footer"
+    = render partial:"groups/footer"
 
 
